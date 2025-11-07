@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>JobTrackr - Nouvelle Candidature</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#4A4DE6",
+                        "background-light": "#F7F7F7",
+                        "background-dark": "#101622",
+                        "text-primary": "#1A1A1A",
+                        "text-secondary": "#8A8A8A",
+                        "border-color": "#dbdfe6",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-text-primary dark:text-gray-200">
+    <div class="relative flex min-h-screen w-full flex-col items-center justify-center p-4 sm:p-6 md:p-8">
+        <div
+            class="flex w-full max-w-4xl flex-col rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900/50 shadow-sm">
+            <header class="p-6 border-b border-gray-200 dark:border-gray-800">
+                <div class="flex flex-col gap-2">
+                    <h1 class="text-2xl font-bold leading-tight tracking-tight text-text-primary dark:text-white">
+                        Nouvelle Candidature</h1>
+                    <p class="text-text-secondary dark:text-gray-400 text-sm">Remplissez les informations ci-dessous
+                        pour ajouter une nouvelle candidature à votre suivi.</p>
+                </div>
+            </header>
+            <main class="flex-1 p-6">
+                <form action="#" class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6" method="POST">
+                    <!-- Section 1 : Informations Clés -->
+                    <div class="md:col-span-2">
+                        <h2 class="text-lg font-semibold text-text-primary dark:text-white mb-4">Informations Clés</h2>
+                    </div>
+                    <div class="flex flex-col">
+                        <label class="text-sm font-medium leading-normal pb-2 text-text-primary dark:text-gray-300"
+                            for="job-title">Titre du poste</label>
+                        <input
+                            class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-primary dark:text-gray-200 focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-border-color dark:border-gray-700 bg-white dark:bg-gray-800 focus:border-primary h-12 placeholder:text-text-secondary px-4 text-base font-normal leading-normal"
+                            id="job-title" placeholder="ex: Développeur Full-Stack" type="text" value="" />
+                    </div>
+                    <div class="flex flex-col">
+                        <label class="text-sm font-medium leading-normal pb-2 text-text-primary dark:text-gray-300"
+                            for="company-name">Entreprise</label>
+                        <input
+                            class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-primary dark:text-gray-200 focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-border-color dark:border-gray-700 bg-white dark:bg-gray-800 focus:border-primary h-12 placeholder:text-text-secondary px-4 text-base font-normal leading-normal"
+                            id="company-name" placeholder="ex: Google" type="text" value="" />
+                    </div>
+                    <div class="md:col-span-2 flex flex-col">
+                        <label class="text-sm font-medium leading-normal pb-2 text-text-primary dark:text-gray-300"
+                            for="job-link">Lien vers l'offre</label>
+                        <input
+                            class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-primary dark:text-gray-200 focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-border-color dark:border-gray-700 bg-white dark:bg-gray-800 focus:border-primary h-12 placeholder:text-text-secondary px-4 text-base font-normal leading-normal"
+                            id="job-link" placeholder="https://careers.google.com/..." type="url" value="" />
+                    </div>
+                    <!-- Section 2 : Suivi -->
+                    <div class="md:col-span-2 mt-4">
+                        <h2 class="text-lg font-semibold text-text-primary dark:text-white mb-4">Suivi</h2>
+                    </div>
+                    <div class="flex flex-col">
+                        <label class="text-sm font-medium leading-normal pb-2 text-text-primary dark:text-gray-300"
+                            for="submission-date">Date de soumission</label>
+                        <div class="relative">
+                            <input
+                                class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-primary dark:text-gray-200 focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-border-color dark:border-gray-700 bg-white dark:bg-gray-800 focus:border-primary h-12 placeholder:text-text-secondary pl-10 pr-4 text-base font-normal leading-normal"
+                                id="submission-date" placeholder="Sélectionner une date" type="text" value="" />
+                            <span
+                                class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-text-secondary">calendar_today</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <label class="text-sm font-medium leading-normal pb-2 text-text-primary dark:text-gray-300"
+                            for="status">Statut</label>
+                        <div class="relative">
+                            <select
+                                class="form-select appearance-none flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-primary dark:text-gray-200 focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-border-color dark:border-gray-700 bg-white dark:bg-gray-800 focus:border-primary h-12 placeholder:text-text-secondary px-4 text-base font-normal leading-normal"
+                                id="status">
+                                <option>En attente</option>
+                                <option>Entretien</option>
+                                <option>Offre</option>
+                                <option>Refusé</option>
+                            </select>
+                            <span
+                                class="material-symbols-outlined pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-text-secondary">expand_more</span>
+                        </div>
+                    </div>
+                    <!-- Section 3 : Détails -->
+                    <div class="md:col-span-2 mt-4">
+                        <h2 class="text-lg font-semibold text-text-primary dark:text-white mb-4">Détails</h2>
+                    </div>
+                    <div class="md:col-span-2 flex flex-col">
+                        <label class="text-sm font-medium leading-normal pb-2 text-text-primary dark:text-gray-300"
+                            for="notes">Notes</label>
+                        <textarea
+                            class="form-textarea flex w-full min-w-0 flex-1 resize-y overflow-hidden rounded-lg text-text-primary dark:text-gray-200 focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-border-color dark:border-gray-700 bg-white dark:bg-gray-800 focus:border-primary min-h-36 placeholder:text-text-secondary p-4 text-base font-normal leading-normal"
+                            id="notes"
+                            placeholder="Ajoutez des notes, des commentaires ou des détails sur l'entretien..."></textarea>
+                    </div>
+                    <!-- Section 4 : Documents -->
+                    <div class="md:col-span-2 mt-4">
+                        <h2 class="text-lg font-semibold text-text-primary dark:text-white mb-4">Documents</h2>
+                    </div>
+                    <div class="md:col-span-2">
+                        <div
+                            class="flex w-full items-center justify-center rounded-lg border-2 border-dashed border-gray-300 dark:border-gray-700 p-8 text-center bg-gray-50 dark:bg-gray-800/50">
+                            <div class="flex flex-col items-center gap-4">
+                                <div
+                                    class="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 dark:bg-primary/20">
+                                    <span class="material-symbols-outlined text-primary text-2xl">upload_file</span>
+                                </div>
+                                <div class="flex flex-col">
+                                    <p class="font-medium text-text-primary dark:text-white">Glissez-déposez vos
+                                        fichiers ici</p>
+                                    <p class="text-sm text-text-secondary dark:text-gray-400">ou <span
+                                            class="font-semibold text-primary cursor-pointer">cliquez pour
+                                            parcourir</span></p>
+                                    <p class="text-xs text-text-secondary dark:text-gray-500 mt-2">PDF, DOCX, etc. (max.
+                                        10MB)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </main>
+            <footer class="flex items-center justify-end gap-4 p-6 border-t border-gray-200 dark:border-gray-800">
+                <button
+                    class="px-4 py-2 rounded-lg text-sm font-semibold text-text-primary dark:text-gray-300 bg-white dark:bg-gray-800 border border-border-color dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary/50 dark:focus:ring-offset-background-dark"
+                    type="button">Annuler</button>
+                <button
+                    class="px-4 py-2 rounded-lg text-sm font-semibold text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary/50 dark:focus:ring-offset-background-dark"
+                    type="submit">Enregistrer la candidature</button>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

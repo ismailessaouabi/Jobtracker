@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    @livewireStyles
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+</head>
+<body>
+    <section class="w-full flex ">
+        <div class="w-64 flex">
+            <div class=" flex h-screen items-center justify-start min-h-[700px]  flex-col border-r border-gray-200  bg-white  p-4 fixed top-0">
+                <h1 class="text-[#1A1A1A]  text-4xl font-bold leading-normal">JobTracker</h1>
+                <nav class="flex w-full flex-col gap-2">
+                    <ul class="flex flex-col p-4 pl-2 ">
+                        <li><a href="{{-- route('dashboard') --}}" class="flex gap-1 hover:bg-gray-200 p-2"><x-heroicon-o-home class="w-6 h-6 text-gray-600" />Dashboard</a></li>
+                        <li><a href="{{-- route('tableaux') --}}" class="flex gap-1 hover:bg-gray-200 p-2"><x-heroicon-o-newspaper class="w-6 h-6 text-gray-600" />Mes condedature</a></li>
+                        <li><a href="{{-- route('projets') --}}" class="flex gap-1 hover:bg-gray-200 p-2"><x-carbon-settings-check class="w-6 h-6 text-gray-600"/>Autre</a></li>
+                        <li><a href="{{-- route('projets') --}}" class="flex gap-1 hover:bg-gray-200 p-2"><x-heroicon-o-arrow-left-circle class="w-6 h-6 text-gray-600"/>Autre</a></li>
+    
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+        {{ $slot }}
+    </section>
+    @livewireScripts
+</body>
+</html>
