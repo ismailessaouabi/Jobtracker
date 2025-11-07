@@ -10,18 +10,17 @@
 </head>
 <body>
     <section class="w-full flex ">
-        <div class="w-72 h-screen flex relative ">
+        <div class="w-[20%] h-screen flex relative ">
             <div class=" flex w-full h-fit bg-white items-center justify-start  flex-col border-r border-gray-200    p-4 absolute top-0 right-0">
                 <h1 class="text-[#1A1A1A]  text-4xl font-bold leading-normal">JobTracker</h1>
                 <nav class="flex w-full flex-col gap-2">
                     <ul class="flex flex-col p-4 pl-2 ">
-                        <li><a href="{{-- route('dashboard') --}}" class="flex gap-1 hover:bg-gray-200 p-2"><x-heroicon-o-home class="w-6 h-6 text-gray-600" />Dashboard</a></li>
+                        <li><a href="{{ route('dashboard') }}" class="flex gap-1 hover:bg-gray-200 p-2 @if (request()->routeIs('dashboard')) bg-gray-200 @endif">
+                            <x-heroicon-o-home class="w-6 h-6 text-gray-600" />Dashboard</a>
+                        </li>
                         <li><a href="{{ route('list.condidatures') }}" class="flex gap-1 hover:bg-gray-200 p-2 @if (request()->routeIs('list.condidatures')) bg-gray-200 @endif">
                             <x-heroicon-o-newspaper class="w-6 h-6 text-gray-600" />Mes condidature</a>
                         </li>
-                        <li><a href="{{-- route('projets') --}}" class="flex gap-1 hover:bg-gray-200 p-2"><x-carbon-settings-check class="w-6 h-6 text-gray-600"/>Autre</a></li>
-                        <li><a href="{{-- route('projets') --}}" class="flex gap-1 hover:bg-gray-200 p-2"><x-heroicon-o-arrow-left-circle class="w-6 h-6 text-gray-600"/>Autre</a></li>
-    
                     </ul>
                 </nav>
             </div>

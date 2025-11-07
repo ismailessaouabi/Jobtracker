@@ -1,4 +1,4 @@
-<div class="bg-[#f8f9fa] w-full">
+<div class="bg-[#f8f9fa] w-[80%]">
     <div class="flex justify-between p-4">
         <h1 class="  text-3xl font-bold leading-tight tracking-tight">
             Tableaux de bord
