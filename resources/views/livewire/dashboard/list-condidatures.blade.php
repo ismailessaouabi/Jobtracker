@@ -45,8 +45,7 @@
             
             <div class="flex gap-2 w-full md:w-auto">
                 <div class="relative w-full">
-                    <span
-                        class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 ">search</span>
+                    
                     <input
                         class="w-full pl-10 pr-4 py-2 text-sm rounded-lg border border-gray-300 bg-white  focus:ring-primary focus:border-primary text-[#1A202C]  placeholder-gray-400 "
                         placeholder="Rechercher..." type="text" />
@@ -54,94 +53,71 @@
             </div>
         </div>
         <!-- Table -->
-        <div class="px-4 py-3 @container">
-            <div
-                class="flex overflow-hidden rounded-xl border border-gray-200  bg-white d">
-                <table class="w-full">
-                    <thead class="bg-gray-50 d">
-                        <tr class="">
-                            <th
-                                class="px-6 py-3 text-left text-xs font-medium text-[#718096]  uppercase tracking-wider">
-                                titre_ offre</th>
-                            <th
-                                class="px-6 py-3 text-left text-xs font-medium text-[#718096]  uppercase tracking-wider">
-                                Entreprise</th>
-                            <th
-                                class="px-6 py-3 text-left text-xs font-medium text-[#718096]  uppercase tracking-wider">
-                                Statut</th>
-                            <th
-                                class="px-6 py-3 text-left text-xs font-medium text-[#718096]  uppercase tracking-wider">
-                                Date de candidature</th>
-                            <th
-                                class="px-6 py-3 text-left text-xs font-medium text-[#718096]  uppercase tracking-wider">
-                                Prochaine étape</th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-gray-200 ">
-                       @foreach ($condidatures as $condidature )
-                        <tr>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-[#1A202C] ">
-                                {{ $condidature->titre_offre }}</td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-[#4A5568] ">
-                                {{ $condidature->nom_entreprise }}</td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-[#4A5568] ">
-                                {{ $condidature->status }}</td>
-
-                            
-                        </tr>
-                           
-                       @endforeach 
-                            
-                        
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <!-- Pagination -->
-        <div class="flex items-center justify-between px-4 py-3 mt-4">
-            <div class="flex-1 flex justify-between sm:hidden">
-                <a class="relative inline-flex items-center px-4 py-2 border border-gray-300  text-sm font-medium rounded-md text-[#718096]  bg-white hover:bg-gray-50 "
-                    href="#"> Précédent </a>
-                <a class="ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300  text-sm font-medium rounded-md text-[#7180 bg-white  hover:bg-gray-50 "
-                    href="#"> Suivant </a>
-            </div>
-            <div class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
-                <div>
-                    <p class="text-sm text-[#718096] ">
-                        Affiche de
-                        <span class="font-medium">1</span>
-                        à
-                        <span class="font-medium">5</span>
-                        sur
-                        <span class="font-medium">23</span>
-                        résultats
-                    </p>
+        <div class="px-4 py-6 flex gap-5 @container">
+            <div class="bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden transition hover:shadow-md">
+                <div class="p-6 space-y-4">
+        
+                    <h2 class="text-2xl font-semibold text-gray-900">
+                        Développeur Fullstack
+                    </h2>
+        
+                    <span class="inline-block bg-blue-100 text-blue-600 text-sm font-medium px-3 py-1 rounded-full border border-blue-200">
+                        Indeed • Privé
+                    </span>
+        
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-gray-700 text-sm mt-4">
+        
+                        <p class="flex items-center gap-2">
+                            <span class="font-medium text-gray-900">Date :</span> 23/12/25
+                        </p>
+        
+                        <p class="flex items-center gap-2">
+                            <span class="font-medium text-gray-900">Statut :</span> En attente
+                        </p>
+        
+                        <p class="flex items-center gap-2">
+                            <span class="font-medium text-gray-900">Location :</span> Remote
+                        </p>
+        
+                        <p class="flex items-center gap-2">
+                            <span class="font-medium text-gray-900">Entreprise :</span> Google
+                        </p>
+        
+                    </div>
+        
                 </div>
-                <div>
-                    <nav aria-label="Pagination"
-                        class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px">
-                        <a class="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-30 bg text-gray hover:bg-gray-50 "
-                            href="#">
-                            <span class="sr-only">Précédent</span>
-                            <span class="material-symbols-outlined text-base">chevron_left</span>
-                        </a>
-                        <a aria-current="page"
-                            class="z-10 bg-primary/20 border-primary text-primary relative inline-flex items-center px-4 py-2 border text-sm font-medium"
-                            href="#"> 1 </a>
-                        <a class="bg-white  border-gray-300  text-gray- hover:bg-gray-50  relative inline-flex items-center px-4 py-2 border text-sm font-medium"
-                            href="#"> 2 </a>
-                        <a class="bg-white  border-gray-300  text-gray- hover:bg-gray-50  hidden md:inline-flex relative items-center px-4 py-2 border text-sm font-medium"
-                            href="#"> 3 </a>
-                        <span
-                            class="relative inline-flex items-center px-4 py-2 border border-gray-30 bg-wtext-sm font-medium text-gray-700 ">
-                            ... </span>
-                        <a class="bg-white  border-gray-300  text-gray- hover:bg-gray-50  hidden md:inline-flex relative items-center px-4 py-2 border text-sm font-medium"
-                            href="#"> 5 </a>
-                        <a class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300  bg-white text-sm font-medium text-gray-500  hover:bg-gray-50" href="#">
-                            <span class="sr-only">Suivant</span>
-                            <span class="material-symbols-outlined text-base">chevron_right</span>
-                        </a>
-                    </nav>
+            </div>
+            <div class="bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden transition hover:shadow-md">
+                <div class="p-6 space-y-4">
+        
+                    <h2 class="text-2xl font-semibold text-gray-900">
+                        Développeur Fullstack
+                    </h2>
+        
+                    <span class="inline-block bg-blue-100 text-blue-600 text-sm font-medium px-3 py-1 rounded-full border border-blue-200">
+                        Indeed • Privé
+                    </span>
+        
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-gray-700 text-sm mt-4">
+        
+                        <p class="flex items-center gap-2">
+                            <span class="font-medium text-gray-900">Date :</span> 23/12/25
+                        </p>
+        
+                        <p class="flex items-center gap-2">
+                            <span class="font-medium text-gray-900">Statut :</span> En attente
+                        </p>
+        
+                        <p class="flex items-center gap-2">
+                            <span class="font-medium text-gray-900">Location :</span> Remote
+                        </p>
+        
+                        <p class="flex items-center gap-2">
+                            <span class="font-medium text-gray-900">Entreprise :</span> Google
+                        </p>
+        
+                    </div>
+        
                 </div>
             </div>
         </div>

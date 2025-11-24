@@ -21,6 +21,18 @@
                         <li><a href="{{ route('list.condidatures') }}" class="flex gap-1 hover:bg-gray-200 p-2 @if (request()->routeIs('list.condidatures')) bg-gray-200 @endif">
                             <x-heroicon-o-newspaper class="w-6 h-6 text-gray-600" />Mes condidature</a>
                         </li>
+                        <li><a href="{{-- route('add.condidature') --}}" class="flex gap-1 hover:bg-gray-200 p-2 @if (request()->routeIs('add.condidature')) bg-gray-200 @endif">
+                            <x-heroicon-o-plus-circle class="w-6 h-6 text-gray-600" />Website de recrutement</a>
+                        </li>
+                        <li><a href="{{-- route('add.condidature') --}}" class="flex gap-1 hover:bg-gray-200 p-2 @if (request()->routeIs('add.condidature')) bg-gray-200 @endif">
+                            <x-heroicon-o-plus-circle class="w-6 h-6 text-gray-600" />Secteur public</a>
+                        </li>
+                        <li><a href="{{-- route('add.condidature') --}}" class="flex gap-1 hover:bg-gray-200 p-2 @if (request()->routeIs('add.condidature')) bg-gray-200 @endif">
+                            <x-heroicon-o-plus-circle class="w-6 h-6 text-gray-600" />Secteur prive</a>
+                        </li>
+                        <li><a href="{{-- route('add.condidature') --}}" class="flex gap-1 hover:bg-gray-200 p-2 @if (request()->routeIs('add.condidature')) bg-gray-200 @endif">
+                            <x-heroicon-o-plus-circle class="w-6 h-6 text-gray-600" />Les stages</a>
+                        </li>
                     </ul>
                 </nav>
             </div>
