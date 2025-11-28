@@ -3,7 +3,7 @@
         <h1 class="  text-3xl font-bold leading-tight tracking-tight">
             Tableaux de bord
         </h1>
-        <a href="" class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-blue-600 text-white text-sm font-semibold leading-normal shadow-sm hover:bg-primary/90    ">Ajouter une condidature</a>
+        <a href="{{ route('ajouter.condidature')}}" class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-blue-600 text-white text-sm font-semibold leading-normal shadow-sm hover:bg-primary/90    ">Ajouter une condidature</a>
 
     </div>
     <div class=" p-5 w-full flex justify-between items-center gap-2">

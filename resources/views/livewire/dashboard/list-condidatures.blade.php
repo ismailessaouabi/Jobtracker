@@ -20,7 +20,7 @@
         <div class="flex flex-1 justify-end items-center gap-4">
             <button
                 class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-blue-600 text-white text-sm font-bold leading-normal tracking-[0.015em]">
-                <span class="truncate">Ajouter une candidature</span>
+                <a href="{{ route('ajouter.condidature')}}" class="truncate">Ajouter une candidature</a>
             </button>
             <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
                 data-alt="User profile picture"

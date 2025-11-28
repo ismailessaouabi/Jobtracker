@@ -15,32 +15,20 @@
                 </div>
                 
             @endif
-            <h2 class="pt-6 text-2xl font-semibold">Informations Clés</h2>
-            <div class="w-full flex gap-2 justify-between">
-                <div class="w-1/2">
-                    <label class="font-semibold" >Titre du poste</label>
-                    <input wire:model="titre_offre" placeholder="ex: Développeur Full-Stack" type="text" class="w-full border border-gray-300 rounded p-2">
-                </div>
-                <div class="w-1/2">
-                    <label class="font-semibold">Entreprise</label>
-                    <input wire:model="nom_entreprise" placeholder="ex: Google" type="text"  class="w-full border border-gray-300 rounded p-2">
-                </div>
+            <div class="w-full flex gap-2 flex-wrap justify-between">
+                <x-input type="text" wiremodel="titre_offre" title="Intitulé du poste" placeholder="ex: Developpeur fullstack"/>
+                <x-input type="text" wiremodel="entreprise" title="Entreprise" placeholder="ex: Google"/>
+                <x-input type="text" wiremodel="lieu" title="Lieu" placeholder="ex: Paris"/> 
+                <x-input type="date" wiremodel="date_candidature" title="Date de candidature" placeholder="ex: 2024-01-01"/>
+                <x-input type="url" wiremodel="lien_offre" title="Lien de l'offre" placeholder="ex: https://..."/>
+                <x-input type="text" wiremodel="platforme" title="platforme" placeholder="ex: indeed"/> 
+                <x-input type="email" wiremodel="email" title="email d'entreprise" placeholder="ex ismail@gmail.com" />
+                <x-input type="text" wiremodel="type" title="type de poste" placeholder="ex: public" />
             </div>
-            <div>
-                <label class="font-semibold">Lien vers l'offre</label>
-                <input placeholder="https://careers.google.com/..." type="text" wire:model="lien_offre"  class="w-full border border-gray-300 rounded p-2">
-            </div>
-            <div>
-                <label class="font-semibold">Email d'entreprise</label>
-                <input placeholder="Ex: name@gmail.com" type="email" wire:model="email_entreprise"  class="w-full border border-gray-300 rounded p-2">
-            </div>
-            <h2 class="pt-6 text-2xl font-semibold">Suivi</h2>
-            <div class="w-full flex gap-2 justify-between">
-                <div class="w-1/2">
-                    <label class="font-semibold">Date de soumission                    </label>
-                    <input placeholder="Sélectionner une date" type="date"   class="w-full border border-gray-300 rounded p-3 placeholder">
-                </div>
-                <div class="w-1/2">
+           
+            
+            <div class="w-full flex gap-2 justify-between">               
+                <div class="w-full">
                     <label for="poste">Statut</label>
                     <select wire:model="status" class="appearance-none flex w-full min-w-0 flex-1 border border-gray-200 overflow-hidden rounded-lg      bg-white   p-3 text-base font-normal leading-normal" id="status">
                         <option>En attente</option>
@@ -50,15 +38,11 @@
                     </select>
                 </div>
             </div>
-            <div>
-                <label class="font-semibold">Type offre</label>
-                <input placeholder="https://careers.google.com/..." type="text" wire:model="type_offre"  class="w-full border border-gray-300 rounded p-2">
-            </div>
+            
 
-            <h2 class="pt-6 text-2xl font-semibold">Details</h2>
             <div>
                 <label class="font-semibold"for="poste">Description</label>
-                <textarea wire:model="description_offre" id="poste" name="poste" placeholder="Intitulé du poste" class="w-full border border-gray-300 rounded p-2"></textarea>
+                <textarea wire:model="description_offre" id="poste" name="poste" placeholder="Intitulé du poste" class="w-full border border-gray-300 rounded h-20 p-2"></textarea>
             </div>
 
             <div class="flex items-center justify-end gap-4 p-6 border-t border-gray-200 dark:border-gray-800">
